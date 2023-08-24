@@ -1,0 +1,51 @@
+.crud {
+    width:100px;
+    vertical-align: middle !important;
+}
+.crud a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 60yypx;
+    font-size:1.5em;
+}
+
+.add-new {
+    float:left;
+    margin-bottom: 5px;
+    background-color: black;
+    color: aliceblue;    
+}
+
+#clients table.table td .add {
+    display: inline-block;      
+}
+
+#clients table.table .form-control.error {
+    border-color: #f50000;
+}
+
+i{
+    color: #087b81;
+}
+
+#sa{
+    color: white;
+    background-color:black;
+    margin-bottom: auto;
+    padding-bottom: 5px;   
+}
+#co{
+    color: white;
+    background-color:#087b81;
+    margin-bottom: auto;
+    padding-bottom: 5px;   
+}
+
+.table tbody tr:hover {
+    background-color: #8390A2; 
+}
+.table thead th {
+    color: white;
+    background-color: #087b81;
+}

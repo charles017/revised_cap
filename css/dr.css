@@ -1,0 +1,213 @@
+#totalRow {
+  font-weight: bold;
+  text-align: right;
+  padding: 0;
+}
+
+body{
+  background-color: #087b81;
+}  
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.delivery-receipt-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.btn-border {
+  border: 1px solid #ccc;
+}
+
+.save-button {
+background-color: #087b81;
+color: white;
+}
+
+.action-button-delete, .action-button-edit {
+background-color: #087b81;
+color: white;
+}
+.delivery-receipt-container h2 {
+  text-align: center;
+}
+
+.custom-btn {
+background-color: #087b81 !important;
+color: white !important;
+border: none !important;
+box-shadow: none !important;
+}
+
+.custom-btn:hover {
+background-color: #075b5f !important;
+}
+
+
+
+.action-button-delete, .action-button-edit {
+background-color: #087b81;
+color: white;
+}
+
+
+.action-table {
+  width: auto !important;
+  display: inline-block !important;
+  vertical-align: middle;
+}
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.action-buttons button {
+align-items: center;
+  margin-right: 5px;
+}
+.invalid-feedback {
+  display: none;
+  color: red;
+}
+.modal-content {
+border: none !important;
+box-shadow: none !important;
+padding: 20px;
+}
+
+.modal-right {
+position: absolute;
+top: 20px;
+right: 20px;
+font-weight: bold;
+}
+#savedDataTableBody td {
+text-align: center;
+}
+#savedDataTableBody th {
+text-align: auto;  
+}  
+
+#savedDataTableBody td,
+#savedDataTableBody th {
+background-color: transparent !important;
+border-color: #dee2e6 !important;
+}
+.modal-left {
+position: absolute;
+top: 10px;
+left: 20px;
+font-weight: bold;
+font-size: 1.5em;
+}
+
+.modal-header .close {
+position: absolute;
+top: 2px;
+right: 15px;
+z-index: 9999;
+}
+
+.modal-header {
+position: relative;
+}
+#savedDataModalLabel {
+display: none; 
+}
+
+
+#savedDataSRNumber {
+top: 20px;
+left: 20px;
+}
+
+
+.current-date-time {
+font-size: 10px;
+position: absolute;
+top: 10px;
+right: 20px;
+}
+
+
+.current-date-time {
+font-size: 12px; 
+}
+
+
+
+.modal-left {
+position: absolute;
+top: 20px;
+left: 20px;
+font-weight: bold;
+font-size: 1.5em;  
+}
+
+.table-bordered th {
+  border: none !important;
+}
+
+
+.modal-content {
+  width: 210mm;
+  height: 200mm;
+  margin: auto;
+  padding: 20px;
+}
+
+
+.modal-lower-left {
+font-weight: bold;
+text-align: left;
+}
+
+.modal-lower-left div {
+margin-bottom: 0.5em;
+}
+
+.modal-lower-left.text-right {
+text-align: right;
+}
+.delivery-receipt-container {
+border: 1px solid #b7b5b5;
+border-radius: 10px;
+padding: 20px;
+margin-top: 20px;
+background-color: #f7f2f2;
+}
+.modal-body {
+  max-height: 240mm;
+  overflow-y: auto;
+  margin-top: 4em;
+}
+thead {
+background-color: #087b81;
+color: white;
+border-radius: 10px;
+}
+.table thead th {
+  text-align: center;
+}
+th {
+background-color: #087b81;
+color: white;
+border-radius: 2px;
+}
+
+@media print {
+  .modal-content {
+    width: 210mm; 
+    height: 297mm;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .modal-body {
+    max-height: 240mm; 
+    overflow-y: auto;
+    font-size: 10pt; 
+  }
+}

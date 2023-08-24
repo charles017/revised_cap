@@ -1,0 +1,50 @@
+
+
+html, body{
+  line-height:1.5;
+  font-size:16px;
+  min-width: 320px;
+  font-family: 'Poppins' ,sans-serif;
+}
+
+
+.container{
+    margin:0;
+
+}
+
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+  
+  /* Style tab links */
+  .tablink {
+    background-color: #087b81;
+    color: black;
+    font-weight: bolder;
+    float: left;
+    border:none;
+    outline: 3px solid white;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 10px;
+    width: 25%;
+  }
+
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    outline: 3px solid white;
+  }
+  
+  #Home {background-color:white;}
+  #News {background-color: white;}
+  #Contact {background-color: white;}
+  #About {background-color: white;}
