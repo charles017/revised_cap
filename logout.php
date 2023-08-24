@@ -8,6 +8,6 @@ require 'vendor/autoload.php';
 include 'config.php';
 
 unset($_SESSION['user']);
-header('location: '.BASE_URL.'revised.php');
+header('location: '.BASE_URL.'index.php');
 exit;
 ?>
