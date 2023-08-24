@@ -104,7 +104,6 @@ if(isset($_POST['form1'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,7 +116,7 @@ if(isset($_POST['form1'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>  
-    <link rel="stylesheet" href="./css/style1.css"> 
+    <link rel="stylesheet" href="./css/style.css"> 
     <link rel="icon" type="image/x-icon" href="./user/cat.png">   
     <title>Dashboard IMS</title>
 </head>
@@ -131,45 +130,51 @@ if(isset($_POST['form1'])) {
         <div class="sidebar-menu" id="hov">
           <ul>
             <li>
-              <a class="active" href="<?php echo BASE_URL; ?>dashboard.php">
+              <a href="#" class="active">
                 <span class="fas fa-tachometer-alt"></span>
                 <span>Dashboard</span>
               </a>
             </li>
             <li>
-              <a href="<?php echo BASE_URL; ?>dr.php">
+              <a href="dr.html">
                 <span class="fas fa-boxes"></span>
                 <span>Delivery Receipt</span>
               </a>
             </li>
             <li>
-              <a href="<?php echo BASE_URL; ?>sr.php">
+              <a href="sr.html">
                 <span class="fa-solid fa-cubes-stacked"></span>
                 <span>Stock Receipt</span>
               </a>
             </li>
             <li>
-              <a href="<?php echo BASE_URL; ?>stockcard.php">
+              <a href="stockcard.html">
                 <span class="fa-solid fa-table"></span>
                 <span>Stock Card</span>
               </a>
             </li>
             <li>
-              <a href="<?php echo BASE_URL; ?>customer.php">
+              <a href="customer.html">
                 <span class="fas fa-users" ></span>
                 <span>Customers</span>
               </a>
             </li>
             <li>
-              <a href="<?php echo BASE_URL; ?>reports.php">
+              <a href="#">
                 <span class='bx bx-folder'></span>
               <span>Reports</span>
               </a>
             </li>
             <li>
-              <a href="<?php echo BASE_URL; ?>orders.php">
+              <a href="Orders.html">
                 <span class="fas fa-shopping-cart"></span>
                 <span>Orders</span>
+              </a>
+            </li>
+            <li>
+              <a href="messages.html">
+                <span class="fas fa-user-circle"></span>
+                <span>Accounts</span>
               </a>
             </li>
           </ul>
@@ -177,102 +182,92 @@ if(isset($_POST['form1'])) {
     </div>
 
     <div class="main-content">
-    <header>
-      <h2>
-        <label for="nav-toggle">
-          <span class="fas fa-bars"></span>
-        </label>
-        Dashboard
-      </h2>
+      <header class="mb-5">"
+        <h2>
+          <label for="nav-toggle">
+            <span class="fas fa-bars"></span>
+          </label>
+          Dashboard
+        </h2>
 
-      <div class="search-wrapper">
-        <span class="fas fa-search" id="searchIcon"></span>
-        <input type="search" id="searchInput" placeholder="Search..." />
+        <div class="search-wrapper">
+          <span class="fas fa-search" id="searchIcon"></span>
+          <input type="search" id="searchInput" placeholder="Search..." />
+          </div>
+              <div class="user-wrapper">
+         <img src="./user/cat.png" width="40px" height="40px" alt="profile-img">
+         <div class="">
+            <h4><?php echo $_SESSION['user']['firstname']; ?></h4>
+            <small>Warehouse Staff</small>
+            <?php if(isset($_SESSION['user'])): ?>
+                    <li><a  class="btn" href="<?php echo BASE_URL; ?>logout.php">Logout</a></li>
+                    <?php endif; ?>
+         </div>
         </div>
-            <div class="user-wrapper">
-       <img src="./user/cat.png" width="40px" height="40px" alt="profile-img">
-       <div class="">
-          <h4><?php echo $_SESSION['user']['firstname']; ?></h4>
-          <small>Warehouse Staff</small>
-          <?php if(isset($_SESSION['user'])): ?>
-                  <li><a  class="btn" href="<?php echo BASE_URL; ?>logout.php">Logout</a></li>
-                  <?php endif; ?>
-       </div>
-      </div>
-    </header>
-    
-    <?php
-if(isset($error_message)) {
-    echo '<div class="error">';
-    echo $error_message;
-    echo '</div>';
-}
-if(isset($success_message)) {
-    echo '<div class="success">';
-    echo $success_message;
-    echo '</div>';
-}
-?>
-<div class="container mt-5">
-    <main class="col-md-10 ms-sm-auto col-lg-12 pb">
-
-      <h1 class="page-heading">Edit Profile</h1>
-
-      <?php
-if(isset($error_message)) {
-    echo '<div class="error">';
-    echo $error_message;
-    echo '</div>';
-}
-if(isset($success_message)) {
-    echo '<div class="success">';
-    echo $success_message;
-    echo '</div>';
-}
-?>
-
-      <form action="" method="post" enctype="multipart/form-data">
-      <div class="row mt-5">
-          <div class="col-md-3">
-              <img src="<?php echo BASE_URL; ?>uploads/<?php echo $_SESSION['user']['photo']; ?>" class="img-thumbnail mb_10" alt="">
-              <input type="file" name="photo" class="form-control">
-          </div>
-          <div class="col-md-9">
-              <div class="row">
-                  <div class="col-md-6 mb-3">
-                      <label for="firstname" class="form-label">First Name</label>
-                      <input type="text" class="form-control" name="firstname" value="<?php echo $_SESSION['user']['firstname']; ?>">
-                  </div>
-                  <div class="col-md-6 mb-3">
-                      <label for="lastname" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" name="lastname" value="<?php echo $_SESSION['user']['lastname']; ?>">
-                  </div>
-                  <div class="col-md-6 mb-3">
-                      <label for="email" class="form-label">Email Address</label>
-                      <input type="email" class="form-control" name="email" value="<?php echo $_SESSION['user']['email']; ?>">
-                  </div>
-                  <div class="col-md-6 mb-3">
-                      <label for="phone" class="form-label">Phone</label>
-                      <input type="tel" class="form-control" name="phone" value="<?php echo $_SESSION['user']['phone']; ?>">
-                  </div>
-                  <div class="col-md-6 mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" name="password">
-                  </div>
-                  <div class="col-md-6 mb-3">
-                      <label for="retype_password" class="form-label">Confirm Password</label>
-                      <input type="password" class="form-control" name="retype_password">
-                  </div>
-                  <div class="col-md-12 mb-3">
-                    <input type="submit" value="Update" name="form1" class="btn btn-primary" style="background-color: #087b81; border-color: #087b81;">
-                  </div>
-              </div>
-          </div>
-      </div>
-</div>
-
+      </header>
       
-    </div>   
+      
+      <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4 pb-3">
+      
+  
+
+        <h1 class="page-heading mt-5">Edit Profile</h1>
+        <?php
+if(isset($error_message)) {
+    echo '<div class="error">';
+    echo $error_message;
+    echo '</div>';
+}
+if(isset($success_message)) {
+    echo '<div class="success">';
+    echo $success_message;
+    echo '</div>';
+}
+?>
+        <form action="" method="post" enctype="multipart/form-data">
+        <div class="row mt-5">
+            <div class="col-md-3">
+            <img src="<?php echo BASE_URL; ?>uploads/<?php echo $_SESSION['user']['photo']; ?>" class="img-thumbnail mb_10" alt="">
+                <input type="file" name="photo" class="form-control">
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="firstname" value="<?php echo $_SESSION['user']['firstname']; ?>">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="lastname" value="<?php echo $_SESSION['user']['lastname']; ?>">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" name="email" value="<?php echo $_SESSION['user']['email']; ?>">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" name="phone" value="<?php echo $_SESSION['user']['phone']; ?>">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="retype_password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="retype_password">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                    <input type="submit" value="Update" name="form1" class="btn btn-primary" style="background-color: #087b81; border-color: #087b81;" onclick="alert('You are making changes on your profile')">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+
+        
+
+    </main>
+    </div>
   <script src="./javascript/ims.js"></script>    
 <script src="./javascript/search.js"></script>
  <!-- Messenger Chat Plugin Code -->
