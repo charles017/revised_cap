@@ -11,4 +11,4 @@ try {
 catch( PDOException $exception ) {
     echo "Connection error :" . $exception->getMessage();
 }
-define('BASE_URL','http://localhost/revised/');
+define('BASE_URL','http://localhost/revised_cap/');
