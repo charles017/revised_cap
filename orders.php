@@ -25,6 +25,9 @@ if(!isset($_SESSION['user'])) {
     <title>Order Status</title>
 </head>
 <body>
+    <div class="container mb-3" id="back">
+        <a href="dashboard.php" style="text-decoration:none; color:white; font-size:20px;"><< back to dashboard</a>
+    </div>
     <section class="artist-info">
         <div class="container">
           <div class="row">
