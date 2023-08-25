@@ -29,6 +29,9 @@ if(!isset($_SESSION['user'])) {
     <title>Stock Receipt</title>
 </head>
 <body>
+    <div class="container mb-3" id="back">
+        <a href="dashboard.php" style="text-decoration:none; color:white; font-size:20px;"><< back to dashboard</a>
+    </div>
   <div class="container mt-5 stock-receipt-container">
     <h2>Stock Receipt</h2>
     <div class="row mt-3">
