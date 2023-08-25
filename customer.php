@@ -28,6 +28,10 @@ if(!isset($_SESSION['user'])) {
     <title>Customers</title>
 </head>
 <body>
+    <div class="container mb-3" id="back">
+        <a href="dashboard.php" style="text-decoration:none; color:white; font-size:20px;"><< back to dashboard</a>
+    </div>
+            
     <div class="modal" id="clients" style="display:block;">
         <div class="modal-dialog modal-lg">
           <div class="modal-content rounded-top" >
